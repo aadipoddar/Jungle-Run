@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8308729927732759065}
   - component: {fileID: 8308729927732759064}
+  - component: {fileID: -5952618119416214180}
   m_Layer: 0
   m_Name: LargeGround
   m_TagString: Untagged
@@ -102,6 +103,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 13.53041, y: 2.02628}
   m_EdgeRadius: 0
+--- !u!114 &-5952618119416214180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8308729927732759066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25f1d8587921c75439950ea062376dad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8308729927759286235
 GameObject:
   m_ObjectHideFlags: 0
