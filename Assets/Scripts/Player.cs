@@ -6,7 +6,10 @@ public class Player : MonoBehaviour
 {
     public float speed;
     public float jump;
+
     public LayerMask ground;
+    public LayerMask deathGround;
+
     private Rigidbody2D rigidBody;
     private Collider2D playerCollider;
     private Animator animator;
@@ -17,6 +20,8 @@ public class Player : MonoBehaviour
     public float mileStone;
     private float mileStoneCount;
     public float speedMultiplier;
+
+    public GameManager gameManager;
 
     void Start()
     {
@@ -29,6 +34,11 @@ public class Player : MonoBehaviour
 
     void Update()
     {
+        bool dead = Physics2D.IsTouchingLayers(playerCollider, deathGround);
+
+        if (dead)
+            gameManager.GameOver();
+
         if (transform.position.x > mileStoneCount)
         {
             mileStoneCount += mileStone;
