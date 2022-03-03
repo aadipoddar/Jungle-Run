@@ -18,6 +18,8 @@ public class GroundGenerator : MonoBehaviour
     public ObjectPooler[] groundPoolers;
     private float[] groundWidths;
 
+    private CoinsGenerator coinGenerator;
+
     void Start()
     {
         minY = minHeightPoint.position.y;
@@ -27,6 +29,8 @@ public class GroundGenerator : MonoBehaviour
 
         for (int i = 0; i < groundPoolers.Length; i++)
             groundWidths[i] = groundPoolers[i].pooledObject.GetComponent<BoxCollider2D>().size.x;
+
+        coinGenerator = FindObjectOfType<CoinsGenerator>();
     }
 
     void Update()
@@ -44,6 +48,8 @@ public class GroundGenerator : MonoBehaviour
             GameObject ground = groundPoolers[random].GetPooledObject();
             ground.transform.position = transform.position;
             ground.SetActive(true);
+
+            coinGenerator.SpawnCoins(ground.transform.position, groundWidths[random]);
 
             transform.position = new Vector3(transform.position.x + distance, transform.position.y, transform.position.z);
         }
