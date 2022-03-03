@@ -1311,6 +1311,7 @@ MonoBehaviour:
   pointsPerSecond: 5
   scoreText: {fileID: 358698341}
   hiScoreText: {fileID: 1473429095}
+  score: 0
 --- !u!1 &1329594668
 GameObject:
   m_ObjectHideFlags: 0
@@ -2026,6 +2027,8 @@ MonoBehaviour:
     m_Bits: 256
   deathSound: {fileID: 483184774}
   jumpSound: {fileID: 623468592}
+  mileStone: 100
+  speedMultiplier: 1.1
 --- !u!95 &2059694419
 Animator:
   serializedVersion: 3
